@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>WorkPulse AI – Productivity vs Workload</title>
+<style>
+:root{--bg:#f3f1ff;--card:#fff;--tx:#1d1b3a;--mu:#6b6890;--bd:#e4e0ff;--p:#7c5cff;--c:#00b4c4;--k:#ff4f81;--a:#ffa500;--g:#16a34a;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0e0c22;--card:#1a1740;--tx:#efedff;--mu:#a09cc8;--bd:#2e2a63}}
+:root[data-theme=dark]{--bg:#0e0c22;--card:#1a1740;--tx:#efedff;--mu:#a09cc8;--bd:#2e2a63}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 'Segoe UI',system-ui,sans-serif}
+header{background:linear-gradient(120deg,#5b3df5,#b43cf0 45%,#ff4f81);color:#fff;padding:22px 24px}
+header h1{margin:0;font-size:24px}header p{margin:4px 0 0;opacity:.9}
+nav{display:flex;gap:6px;flex-wrap:wrap;padding:12px 24px;background:var(--card);border-bottom:1px solid var(--bd);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+nav button{border:0;background:transparent;color:var(--mu);padding:8px 14px;border-radius:20px;font-weight:600;cursor:pointer}
+nav button.on{background:linear-gradient(90deg,var(--p),var(--k));color:#fff}
+main{padding:20px 24px;max-width:1250px;margin:auto}.tab{display:none}.tab.on{display:block}
+.grid{display:grid;gap:14px}.k6{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(380px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:16px;overflow-x:auto}
+.kpi{border-top:4px solid var(--c0);position:relative}.kpi b{font-size:26px;display:block}.kpi small{color:var(--mu)}.kpi i{font-style:normal;font-size:12px;font-weight:700}
+h2{margin:0 0 10px;font-size:16px}h3{margin:14px 0 6px}
+.bad{color:var(--k)}.ok{color:var(--g)}
+table{border-collapse:collapse;width:100%;min-width:560px}th,td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--bd)}th{color:var(--mu);font-size:12px;cursor:pointer}
+.pill{padding:2px 10px;border-radius:12px;color:#fff;font-size:12px;font-weight:700}
+.step{display:flex;gap:10px;margin:8px 0}.step span{flex:none;width:28px;height:28px;border-radius:50%;background:linear-gradient(135deg,var(--p),var(--k));color:#fff;display:grid;place-items:center;font-weight:700}
+select,input[type=range]{accent-color:var(--p)}select{padding:6px;border-radius:8px;border:1px solid var(--bd);background:var(--card);color:var(--tx)}
+#chat{height:340px;overflow-y:auto;display:flex;flex-direction:column;gap:8px;padding:6px}
+.m{max-width:85%;padding:9px 13px;border-radius:14px}.u{align-self:flex-end;background:linear-gradient(90deg,var(--p),var(--k));color:#fff}.b{background:var(--bg);border:1px solid var(--bd)}
+.chip{border:1px solid var(--p);color:var(--p);background:transparent;border-radius:16px;padding:5px 11px;margin:3px 3px 0 0;cursor:pointer;font-size:12px}
+#q{flex:1;padding:10px;border-radius:10px;border:1px solid var(--bd);background:var(--card);color:var(--tx);min-width:0}
+.send{border:0;background:var(--p);color:#fff;border-radius:10px;padding:10px 18px;cursor:pointer;font-weight:700}
+.row{display:flex;gap:8px;margin-top:8px}.sl{display:grid;grid-template-columns:150px 1fr 50px;gap:8px;align-items:center;margin:8px 0}
+.rec{border-left:5px solid var(--c0);padding:8px 12px;margin:8px 0;background:var(--bg);border-radius:8px}
+svg{max-width:100%;height:auto}text{fill:var(--mu);font-size:11px}
+</style></head><body>
+<header><h1>⚡ WorkPulse AI — Productivity vs Workload Intelligence</h1><p>AI agent that detects operational bottlenecks and recommends workload interventions · Assumed data: 6 departments, 48 employees, Nov 2025 – Oct 2026</p></header>
+<nav id="nav"></nav>
+<main>
+<section class="tab on" id="t0"><div class="grid g2">
+<div class="card"><h2>📌 What the problem statement means</h2><p>Management sees a paradox: <b>employees are working longer hours, yet output per person is falling</b>. More hours are not producing more results, which usually points to hidden causes: burnout, overloaded teams, poor task distribution, low engagement and rising absenteeism.</p><p>As a data analyst you must build an AI-driven system that combines six data sources, finds <b>where</b> work is getting stuck (bottlenecks), <b>who</b> is at risk, and <b>what to change</b> (workload interventions).</p></div>
+<div class="card"><h2>🎯 Inputs → Outputs</h2><p><b>Inputs:</b> workload (hours), overtime, absenteeism, task completion, engagement, performance.</p><p><b>Outputs:</b> bottleneck score per department, burnout risk per employee, root-cause explanation, ranked interventions, what-if simulation of their impact.</p></div>
+<div class="card"><h2>🧠 Solution approach</h2>
+<div class="step"><span>1</span><div>Collect and clean HR, timesheet and task-tool data</div></div>
+<div class="step"><span>2</span><div>Engineer features: overtime %, absence rate, completion rate, engagement trend</div></div>
+<div class="step"><span>3</span><div>Score bottlenecks: weighted index of overtime, absence, low completion, low engagement</div></div>
+<div class="step"><span>4</span><div>Score burnout risk per employee, find correlations</div></div>
+<div class="step"><span>5</span><div>AI agent explains causes and recommends interventions</div></div>
+<div class="step"><span>6</span><div>Simulator estimates the effect before management acts</div></div></div>
+<div class="card"><h2>🧮 Bottleneck formula (assumed)</h2><p><b>Score = 30% Overtime + 20% Absenteeism + 25% (100 − Task completion) + 25% (100 − Engagement)</b>, each scaled 0–100. Score ≥ 55 = Critical, 40–55 = Watch, below 40 = Healthy.</p><p><b>Burnout risk</b> = 35% hours above 40, 25% overtime, 20% absence days, 20% low engagement.</p><p style="color:var(--mu)">All data here is synthetic and generated for the assignment.</p></div></div></section>
+
+<section class="tab" id="t1"><div class="grid k6" id="kpi"></div><div class="grid g2" style="margin-top:14px">
+<div class="card"><h2>Hours worked vs productivity index</h2><div id="c1"></div></div>
+<div class="card"><h2>Bottleneck score by department</h2><div id="c2"></div></div>
+<div class="card"><h2>Overtime % vs task completion %</h2><div id="c3"></div></div>
+<div class="card"><h2>Engagement trend by department</h2><div id="c4"></div></div></div></section>
+
+<section class="tab" id="t2"><div class="card"><h2>🔥 Department stress heatmap (latest month)</h2><div id="heat"></div></div><div class="card" style="margin-top:14px"><h2>🚧 Detected bottlenecks and root causes</h2><div id="bn"></div></div></section>
+
+<section class="tab" id="t3"><div class="card"><h2>👥 Employee burnout risk <select id="f"></select></h2><div id="et"></div></div></section>
+
+<section class="tab" id="t4"><div class="grid g2">
+<div class="card"><h2>🤖 Ask the AI agent</h2><div id="chat"></div><div id="chips"></div><div class="row"><input id="q" placeholder="e.g. Why is Support slow?"><button class="send" id="go">Send</button></div></div>
+<div class="card"><h2>🎛️ What-if intervention simulator</h2><div class="row"><select id="sd"></select></div>
+<div class="sl"><span>Cut overtime</span><input type="range" id="s1" min="0" max="60" value="25"><b id="v1"></b></div>
+<div class="sl"><span>Add headcount</span><input type="range" id="s2" min="0" max="8" value="2"><b id="v2"></b></div>
+<div class="sl"><span>Automate tasks</span><input type="range" id="s3" min="0" max="40" value="10"><b id="v3"></b></div>
+<div id="sim"></div></div></div></section>
+
+<section class="tab" id="t5"><div class="card"><h2>💡 Recommended interventions (auto-generated)</h2><div id="rec"></div></div></section>
+</main>
+<script>
+const D=['Engineering','Support','Sales','Operations','Finance','HR'],C=['#7c5cff','#00b4c4','#ff4f81','#ffa500','#16a34a','#3b82f6'],SV=[1,1.3,.6,1.1,.4,.3];
+const M=['Nov','Dec','Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct'];
+let s=11;const r=()=>(s=(s*16807)%2147483647)/2147483647,n=()=>r()-.5;
+const H=D.map((d,j)=>M.map((m,i)=>{const v=SV[j]*i;return{hrs:40+v*.6+n()*1.2,prod:100-v*1.3+n()*2,ot:6+v*.9+n(),ab:3+v*.25+n()*.4,co:88-v*1.1+n()*1.5,en:74-v*1.4+n()*2}}));
+const L=H.map(a=>a[11]),clamp=x=>Math.max(0,Math.min(100,x));
+const bs=l=>clamp(.3*l.ot*3.3+.2*l.ab*7+.25*(100-l.co)*1.6+.25*(100-l.en)*1.4);
+const avg=(a,f)=>a.reduce((x,y)=>x+f(y),0)/a.length;
+const E=[];for(let i=0;i<48;i++){const j=i%6,l=L[j];const hrs=l.hrs+n()*8,ot=Math.max(0,l.ot+n()*10),ab=Math.max(0,l.ab*2+n()*4),co=clamp(l.co+n()*16),en=clamp(l.en+n()*24),pf=Math.max(1,Math.min(5,3.3-(100-co)/40+n()));
+const risk=clamp(.35*Math.max(0,hrs-40)*7+.25*ot*3.5+.2*ab*8+.2*(100-en)*1.1);E.push({id:'EMP-'+(101+i),d:j,hrs,ot,ab,co,en,pf,risk})}
+const col=v=>v>=55?'#ff4f81':v>=40?'#ffa500':'#16a34a',lab=v=>v>=55?'Critical':v>=40?'Watch':'Healthy';
+const $=i=>document.getElementById(i),f1=x=>x.toFixed(1);
+const tabs=['Problem','Overview','Bottlenecks','Employees','AI Agent','Interventions'];
+$('nav').innerHTML=tabs.map((t,i)=>`<button class="${i?'':'on'}" data-i="${i}">${['📘','📊','🚧','👥','🤖','💡'][i]} ${t}</button>`).join('');
+$('nav').onclick=e=>{const i=e.target.dataset.i;if(i==null)return;[...document.querySelectorAll('nav button')].forEach((b,k)=>b.classList.toggle('on',k==i));document.querySelectorAll('.tab').forEach((t,k)=>t.classList.toggle('on',k==i))};
+// KPIs
+const A=H[0].map((_,i)=>({hrs:avg(H,x=>x[i].hrs),prod:avg(H,x=>x[i].prod),ot:avg(H,x=>x[i].ot),ab:avg(H,x=>x[i].ab),co:avg(H,x=>x[i].co),en:avg(H,x=>x[i].en)}));
+const kp=[['Avg weekly hours','hrs','h',1,'#7c5cff'],['Productivity index','prod','',-1,'#00b4c4'],['Overtime','ot','%',1,'#ff4f81'],['Absenteeism','ab','%',1,'#ffa500'],['Task completion','co','%',-1,'#16a34a'],['Engagement','en','/100',-1,'#3b82f6']];
+$('kpi').innerHTML=kp.map(k=>{const a=A[0][k[1]],b=A[11][k[1]],d=b-a,bad=d*k[3]>0;return`<div class="card kpi" style="--c0:${k[4]}"><small>${k[0]}</small><b>${f1(b)}${k[2]}</b><i class="${bad?'bad':'ok'}">${d>0?'▲':'▼'} ${f1(Math.abs(d))} vs Nov</i></div>`}).join('');
+// charts
+function line(series,w=520,h=240,ax=[0,0]){const p=40;let o=`<svg viewBox="0 0 ${w} ${h}">`;series.forEach((S,k)=>{const mn=Math.min(...S.v)-1,mx=Math.max(...S.v)+1,X=i=>p+i*(w-2*p)/(S.v.length-1),Y=v=>h-28-(v-mn)/(mx-mn)*(h-50);
+o+=`<path d="${S.v.map((v,i)=>(i?'L':'M')+X(i)+','+Y(v)).join('')}" fill="none" stroke="${S.c}" stroke-width="3"/>`;if(S.v.length==12)o+=S.v.map((v,i)=>`<circle cx="${X(i)}" cy="${Y(v)}" r="3" fill="${S.c}"/>`).join('');
+if(ax[0]||k<2&&series.length<3){o+=`<text x="${k?w-p+4:2}" y="14" style="fill:${S.c}">${S.n}</text><text x="${k?w-p+4:2}" y="${Y(mn+1)}">${f1(mn+1)}</text><text x="${k?w-p+4:2}" y="${Y(mx-1)}">${f1(mx-1)}</text>`}});
+o+=M.map((m,i)=>`<text x="${p+i*(w-2*p)/11-8}" y="${h-8}">${m}</text>`).join('');return o+'</svg>'}
+$('c1').innerHTML=line([{n:'Hours/week',c:'#7c5cff',v:A.map(a=>a.hrs)},{n:'Productivity',c:'#ff4f81',v:A.map(a=>a.prod)}],520,240,[1])+'<p style="color:var(--mu);margin:0">Hours rise while productivity falls: the paradox from the problem statement.</p>';
+const BS=L.map(bs);
+$('c2').innerHTML=`<svg viewBox="0 0 520 240">${D.map((d,i)=>`<rect x="${110}" y="${10+i*37}" width="${BS[i]*5}" height="26" rx="6" fill="${col(BS[i])}"/><text x="4" y="${28+i*37}">${d}</text><text x="${116+BS[i]*5}" y="${28+i*37}" style="fill:var(--tx);font-weight:700">${f1(BS[i])}</text>`).join('')}</svg>`;
+$('c3').innerHTML=`<svg viewBox="0 0 520 260"><line x1="40" y1="230" x2="510" y2="230" stroke="var(--bd)"/><line x1="40" y1="10" x2="40" y2="230" stroke="var(--bd)"/>${E.map(e=>`<circle cx="${40+e.ot*12}" cy="${230-(e.co-40)*3.4}" r="6" fill="${C[e.d]}" opacity=".75"><title>${e.id} ${D[e.d]}</title></circle>`).join('')}<text x="200" y="255">Overtime % →</text><text x="44" y="22">Completion %</text></svg><p style="color:var(--mu);margin:0">Higher overtime clusters with lower completion: extra hours are not converting to output.</p>`;
+$('c4').innerHTML=line(D.map((d,j)=>({n:d,c:C[j],v:H[j].map(x=>x.en)})),520,240)+`<p>${D.map((d,j)=>`<span class="pill" style="background:${C[j]}">${d}</span> `).join('')}</p>`;
+// heatmap
+const hm=[['Hours','hrs',40,52],['Overtime','ot',6,20],['Absence','ab',3,6.5],['Completion','co',90,70],['Engagement','en',75,50]];
+$('heat').innerHTML=`<table><tr><th>Department</th>${hm.map(m=>`<th>${m[0]}</th>`).join('')}<th>Score</th><th>Status</th></tr>${D.map((d,j)=>`<tr><td><b style="color:${C[j]}">${d}</b></td>${hm.map(m=>{const t=clamp((L[j][m[1]]-m[2])/(m[3]-m[2])*100);return`<td style="background:${col(t*.7)}33;font-weight:700">${f1(L[j][m[1]])}</td>`}).join('')}<td><b>${f1(BS[j])}</b></td><td><span class="pill" style="background:${col(BS[j])}">${lab(BS[j])}</span></td></tr>`).join('')}</table>`;
+const cause=j=>{const l=L[j],c=[];if(l.ot>12)c.push(`overtime at ${f1(l.ot)}%`);if(l.ab>5)c.push(`absence at ${f1(l.ab)}%`);if(l.co<78)c.push(`completion down to ${f1(l.co)}%`);if(l.en<62)c.push(`engagement low at ${f1(l.en)}`);return c.length?c.join(', '):'no major stress signals'};
+const order=D.map((_,i)=>i).sort((a,b)=>BS[b]-BS[a]);
+$('bn').innerHTML=order.map(j=>`<div class="rec" style="--c0:${col(BS[j])}"><b>${D[j]}</b> · score ${f1(BS[j])} · ${lab(BS[j])}<br><span style="color:var(--mu)">Drivers: ${cause(j)}.</span></div>`).join('');
+// employees
+$('f').innerHTML='<option value="-1">All departments</option>'+D.map((d,i)=>`<option value="${i}">${d}</option>`).join('');
+function emp(){const v=+$('f').value;$('et').innerHTML=`<table><tr><th>ID</th><th>Dept</th><th>Hours</th><th>OT%</th><th>Absent days</th><th>Completion</th><th>Engagement</th><th>Perf</th><th>Burnout risk</th></tr>${E.filter(e=>v<0||e.d==v).sort((a,b)=>b.risk-a.risk).map(e=>`<tr><td>${e.id}</td><td style="color:${C[e.d]};font-weight:700">${D[e.d]}</td><td>${f1(e.hrs)}</td><td>${f1(e.ot)}</td><td>${f1(e.ab)}</td><td>${f1(e.co)}%</td><td>${f1(e.en)}</td><td>${f1(e.pf)}</td><td><span class="pill" style="background:${col(e.risk)}">${f1(e.risk)} ${lab(e.risk)}</span></td></tr>`).join('')}</table>`}
+$('f').onchange=emp;emp();
+// interventions
+const IV=j=>{const l=L[j],a=[];if(l.ot>12)a.push('Cap overtime at 8% and rebalance shifts across the team');if(l.co<78)a.push('Hire or borrow 2–3 FTEs and remove low-value tasks');if(l.en<62)a.push('Run manager 1:1s, recognition and flexible-hours pilot');if(l.ab>5)a.push('Wellbeing check-ins and rotate on-call duties');if(!a.length)a.push('Maintain current plan and monitor monthly');return a};
+$('rec').innerHTML=order.map(j=>`<div class="rec" style="--c0:${col(BS[j])}"><b style="color:${C[j]}">${D[j]}</b> <span class="pill" style="background:${col(BS[j])}">${lab(BS[j])}</span><ul style="margin:6px 0 0">${IV(j).map(x=>`<li>${x}</li>`).join('')}</ul></div>`).join('');
+// simulator
+$('sd').innerHTML=D.map((d,i)=>`<option value="${i}">${d}</option>`).join('');
+function sim(){const j=+$('sd').value,a=+$('s1').value,b=+$('s2').value,c=+$('s3').value;$('v1').textContent=a+'%';$('v2').textContent='+'+b;$('v3').textContent=c+'%';const l=L[j];
+const ot=l.ot*(1-a/100),co=Math.min(96,l.co+b*1.3+c*.3+a*.08),en=Math.min(90,l.en+a*.18+b*.8),ab=Math.max(1.5,l.ab-a*.03-b*.15),pr=l.prod+a*.12+b*1.6+c*.35;
+const nl={ot,co,en,ab},nb=bs(nl),row=(n,x,y,u,g)=>`<tr><td>${n}</td><td>${f1(x)}${u}</td><td><b>${f1(y)}${u}</b></td><td class="${(y-x)*g>0?'ok':'bad'}">${y>x?'+':''}${f1(y-x)}</td></tr>`;
+$('sim').innerHTML=`<table style="min-width:0"><tr><th>Metric</th><th>Now</th><th>After</th><th>Δ</th></tr>${row('Productivity',l.prod,pr,'',1)}${row('Overtime',l.ot,ot,'%',-1)}${row('Completion',l.co,co,'%',1)}${row('Engagement',l.en,en,'',1)}${row('Absenteeism',l.ab,ab,'%',-1)}${row('Bottleneck score',BS[j],nb,'',-1)}</table><p>Status: <span class="pill" style="background:${col(BS[j])}">${lab(BS[j])}</span> → <span class="pill" style="background:${col(nb)}">${lab(nb)}</span></p>`}
+['sd','s1','s2','s3'].forEach(i=>$(i).oninput=sim);$('sd').value=order[0];sim();
+// agent
+const say=(h,u)=>{const d=document.createElement('div');d.className='m '+(u?'u':'b');d.innerHTML=h;$('chat').appendChild(d);$('chat').scrollTop=1e9};
+function ans(q){q=q.toLowerCase();const j=D.findIndex(d=>q.includes(d.toLowerCase()));
+if(j>=0){const l=L[j];return`<b>${D[j]}</b> scores <b>${f1(BS[j])}</b> (${lab(BS[j])}). Drivers: ${cause(j)}. Productivity fell from ${f1(H[j][0].prod)} to ${f1(l.prod)} while hours rose ${f1(H[j][0].hrs)} → ${f1(l.hrs)}.<br><b>Do:</b> ${IV(j).join('; ')}.`}
+if(/burn|risk|who|employee/.test(q)){const t=[...E].sort((a,b)=>b.risk-a.risk).slice(0,5);return'Top burnout risks: '+t.map(e=>`${e.id} (${D[e.d]}, ${f1(e.risk)})`).join(', ')+`.<br>${E.filter(e=>e.risk>=55).length} employees are in the critical band.`}
+if(/overtime/.test(q))return`Overtime rose from ${f1(A[0].ot)}% to ${f1(A[11].ot)}%. Highest: ${D[[...L.keys()].sort((a,b)=>L[b].ot-L[a].ot)[0]]}. Correlation with task completion is negative, so extra hours are not adding output.`;
+if(/recommend|intervention|fix|action/.test(q))return`Priority order: ${order.slice(0,3).map(j=>`<b>${D[j]}</b> (${IV(j)[0]})`).join('; ')}.`;
+if(/bottleneck|slow|worst|where/.test(q))return`Biggest bottlenecks: ${order.slice(0,3).map(j=>`<b>${D[j]}</b> ${f1(BS[j])}`).join(', ')}. ${D[order[0]]} is driven by ${cause(order[0])}.`;
+if(/why|cause|paradox|decline/.test(q))return`Hours rose ${f1(A[11].hrs-A[0].hrs)}h/week but productivity dropped ${f1(A[0].prod-A[11].prod)} points. Likely chain: overload → overtime → fatigue → lower engagement and higher absence → fewer tasks completed → more overtime.`;
+return'Try asking about a department, burnout risk, overtime, bottlenecks, or recommendations.'}
+function ask(t){if(!t.trim())return;say(t,1);$('q').value='';setTimeout(()=>say(ans(t)),400)}
+$('go').onclick=()=>ask($('q').value);$('q').onkeydown=e=>e.key=='Enter'&&ask($('q').value);
+$('chips').innerHTML=['Where are the bottlenecks?','Why is productivity falling?','Who is at burnout risk?','Recommend interventions','Why is Support slow?'].map(t=>`<button class="chip">${t}</button>`).join('');
+$('chips').onclick=e=>e.target.className=='chip'&&ask(e.target.textContent);
+say('Hello! I am the WorkPulse agent. I analyse workload, overtime, absence, completion, engagement and performance. Ask me anything.');
+</script></body></html>
